@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const { create, findAll, findById, update, like, destroy } = require('../controllers/posts.controller');
+const {sendUploadToGCS} = require('../middlewares/uploadGCS')
+const memUpload = require('../middlewares/multer')
 
 /* GET users listing. */
-router.post('/', create);
+router.post('/', memUpload.single('image'), sendUploadToGCS, create);
 router.get('/', findAll)
 router.get('/:id', findById)
 router.put('/:id', update);

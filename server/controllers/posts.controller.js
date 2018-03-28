@@ -3,7 +3,7 @@ const User = require('../models/users.model');
 
 module.exports = {
     create: (req, res) => {
-        // req.body.img = req.file.cloudStoragePublicUrl;
+        req.body.imgUrl = req.file.cloudStoragePublicUrl;
         req.body.user = req.decoded.id;
         Post.create(req.body, (err, data) => {
             if (err) {
@@ -77,7 +77,7 @@ module.exports = {
                 if (check.length > 0) {
                     response.likes.splice(response.likes.indexOf(req.decoded.id), 1);
                     Post.updateOne({
-                        _id: ObjectId(req.params.id)
+                        _id: req.params.id
                     }, {
                             likes: response.likes
                         }).then((like) => {
@@ -89,7 +89,7 @@ module.exports = {
                 } else {
                     response.likes.push(req.decoded.id);
                     Post.updateOne({
-                        _id: ObjectId(req.params.id)
+                        _id: req.params.id
                     }, {
                             likes: response.likes
                         }).then((like) => {
