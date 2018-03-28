@@ -24,15 +24,15 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 | URL | METHOD | DESCRIPTION |
 |:---:|:------:|:-----------:|
-| http://35.185.179.202 /users/login | POST | Login User |
-| http://35.185.179.202 /users/register | POST | Register User |
-| http://35.185.179.202 /posts | POST | Add New Post |
-| http://35.185.179.202 /posts | GET | Get All Post |
-| http://35.185.179.202 /posts/:id | PUT | Edit Post Caption |
-| http://35.185.179.202 /posts/:id | DELETE | Delete Post |
-| http://35.185.179.202 /posts/like/:id | POST | Like |
+| http://localhost:3000/users/login | POST | Login User |
+| http://localhost:3000/users/register | POST | Register User |
+| http://localhost:3000/posts | POST | Add New Post |
+| http://localhost:3000/posts | GET | Get All Post |
+| http://localhost:3000/posts/:id | PUT | Edit Post Caption |
+| http://localhost:3000/posts/:id | DELETE | Delete Post |
+| http://localhost:3000/posts/like/:id | POST | Like |
 
 ## Live Preview
 ```
-http://jepretgram.rezapramudhika.com
+
 ```
