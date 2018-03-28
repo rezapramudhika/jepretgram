@@ -24,13 +24,13 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 | URL | METHOD | DESCRIPTION |
 |:---:|:------:|:-----------:|
-| http://localhost/users/login | POST | Login User |
-| http://localhost/users/register | POST | Register User |
-| http://localhost/posts | POST | Add New Post |
-| http://localhost/posts | GET | Get All Post |
-| http://localhost/posts/:id | PUT | Edit Post Caption |
-| http://localhost/posts/:id | DELETE | Delete Post |
-| http://localhost/posts/like/:id | POST | Like |
+| http://35.185.179.202 /users/login | POST | Login User |
+| http://35.185.179.202 /users/register | POST | Register User |
+| http://35.185.179.202 /posts | POST | Add New Post |
+| http://35.185.179.202 /posts | GET | Get All Post |
+| http://35.185.179.202 /posts/:id | PUT | Edit Post Caption |
+| http://35.185.179.202 /posts/:id | DELETE | Delete Post |
+| http://35.185.179.202 /posts/like/:id | POST | Like |
 
 ## Live Preview
 ```
