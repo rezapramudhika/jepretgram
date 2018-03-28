@@ -11,8 +11,11 @@ const dbURL = 'mongodb://rezapramudhika:lXmCsLlPFuKsQH8m@rezapramudhika-shard-00
 const db = mongoose.connection;
 require('dotenv').config();
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+const index = require('./routes/index');
+const users = require('./routes/users');
+const posts = require('./routes/posts');
+
+const { authLogin } = require('./middlewares/auth')
 
 var app = express();
 
@@ -31,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/posts', authLogin, posts);
 
 mongoose.connect(dbURL, err => {
   if (!err)
