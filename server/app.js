@@ -15,8 +15,6 @@ const index = require('./routes/index');
 const users = require('./routes/users');
 const posts = require('./routes/posts');
 
-const { authLogin } = require('./middlewares/auth')
-
 var app = express();
 
 // view engine setup
@@ -34,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/posts', authLogin, posts);
+app.use('/posts', posts);
 
 mongoose.connect(dbURL, err => {
   if (!err)

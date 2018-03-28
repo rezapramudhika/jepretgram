@@ -3,7 +3,7 @@ const User = require('../models/users.model');
 
 module.exports = {
     create: (req, res) => {
-        req.body.imgUrl = req.file.cloudStoragePublicUrl;
+        req.body.imageUrl = req.file.cloudStoragePublicUrl;
         req.body.user = req.decoded.id;
         Post.create(req.body, (err, data) => {
             if (err) {
